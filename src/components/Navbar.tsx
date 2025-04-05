@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Logo from './Logo';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
+import { useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
   hospitalName?: string;
@@ -13,6 +14,7 @@ interface NavbarProps {
 
 const Navbar = ({ hospitalName = "Sacred Heart Hospital", userName, userRole }: NavbarProps) => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   
   const handleLogout = () => {
     toast({
@@ -20,6 +22,7 @@ const Navbar = ({ hospitalName = "Sacred Heart Hospital", userName, userRole }: 
       description: "You have been successfully logged out.",
     });
     // In a real app, this would clear auth state and redirect to login
+    navigate('/');
   };
 
   return (
