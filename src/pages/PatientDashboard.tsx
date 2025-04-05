@@ -13,7 +13,7 @@ const patientData = {
   age: 45,
   bloodType: "O+",
   contact: "+12345678",
-  photo: "public/lovable-uploads/3fa00ed7-6ad0-4cf2-92aa-61185518350c.png"
+  photo: "public/lovable-uploads/patient.jpg",
 };
 
 const upcomingOperations = [
