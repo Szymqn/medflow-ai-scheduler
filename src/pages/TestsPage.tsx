@@ -82,7 +82,7 @@ const TestsPage = () => {
   const filteredTests = testData.filter(test => {
     if (filter === 'all') return true;
     if (filter === 'completed') return test.status === 'ok';
-    if (filter === 'pending') return test.status === 'pending' || test.status === 'consult' || test.status === 'tbd';
+    if (filter === 'pending') return test.status === 'pending' || test.status === 'consult';
     return true;
   });
   
@@ -116,7 +116,7 @@ const TestsPage = () => {
                 variant={filter === 'all' ? 'default' : 'outline'} 
                 size="sm"
                 onClick={() => setFilter('all')}
-                className={filter === 'all' ? 'bg-coral text-white' : ''}
+                className={filter === 'all' ? 'bg-blue-400 text-white hover:bg-blue-600' : ''}
               >
                 All
               </Button>
@@ -124,7 +124,7 @@ const TestsPage = () => {
                 variant={filter === 'completed' ? 'default' : 'outline'} 
                 size="sm"
                 onClick={() => setFilter('completed')}
-                className={filter === 'completed' ? 'bg-coral text-white' : ''}
+                className={filter === 'completed' ? 'bg-blue-400 text-white hover:bg-blue-600' : ''}
               >
                 Completed
               </Button>
@@ -132,7 +132,7 @@ const TestsPage = () => {
                 variant={filter === 'pending' ? 'default' : 'outline'} 
                 size="sm"
                 onClick={() => setFilter('pending')}
-                className={filter === 'pending' ? 'bg-coral text-white' : ''}
+                className={filter === 'pending' ? 'bg-blue-400 text-white hover:bg-blue-600' : ''}
               >
                 Pending
               </Button>
@@ -158,9 +158,9 @@ const TestsPage = () => {
                           </div>
                           <div>Doctor: {test.doctor}</div>
                           <div>Location: {test.location}</div>
-                          {test.notes && <div className="mt-2 bg-coral-50 p-2 rounded-md">{test.notes}</div>}
+                          {test.notes && <div className="mt-2 bg-cyan-200 p-2 rounded-md">{test.notes}</div>}
                           {test.result && (
-                            <div className="mt-2 bg-green-50 p-2 rounded-md text-green-800">
+                            <div className="mt-2 bg-cyan-100 p-2 rounded-md text-green-800">
                               <strong>Result:</strong> {test.result}
                             </div>
                           )}
@@ -171,7 +171,7 @@ const TestsPage = () => {
                         {test.status === 'ok' && (
                           <Button
                             onClick={() => handleDownloadPDF(test.id)}
-                            className="bg-coral text-white hover:bg-coral-600"
+                            className="bg-blue-400 text-white hover:bg-blue-600"
                           >
                             <FileDown className="h-4 w-4 mr-2" />
                             Download PDF
@@ -179,7 +179,7 @@ const TestsPage = () => {
                         )}
                         
                         {test.status === 'consult' && (
-                          <Button
+                          <Button className='bg-blue-400 text-white hover:bg-blue-600'
                             onClick={() => handleScheduleConsultation(test.id)}
                           >
                             <Phone className="h-4 w-4 mr-2" />
@@ -231,7 +231,7 @@ const TestsPage = () => {
                   {operation.requiredTests.map((test) => (
                     <div 
                       key={test.id} 
-                      className="p-3 rounded-md bg-coral-50 flex justify-between items-center"
+                      className="p-3 rounded-md bg-cyan-200 flex justify-between items-center"
                     >
                       <div className="flex items-center">
                         <div className={`w-2 h-2 rounded-full mr-3 ${

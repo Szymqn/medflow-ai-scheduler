@@ -80,7 +80,7 @@ const OperationsPage = () => {
                       <div className="flex-1">
                         <div className="flex justify-between items-start">
                           <h3 className="text-xl font-medium">{operation.name}</h3>
-                          <div className="px-3 py-1 rounded-full bg-medgray-100 text-sm">
+                          <div className="px-3 py-1 rounded-full bg-green-400 text-sm">
                             {operation.status === 'ok' ? 'Patient Ready' : 'Tests TBD'}
                           </div>
                         </div>
@@ -107,7 +107,7 @@ const OperationsPage = () => {
                         
                         <div className="mt-4">
                           <h4 className="text-sm font-medium mb-2">Pre-Operation Instructions:</h4>
-                          <p className="text-sm text-gray-600 bg-coral-50 p-3 rounded-md">
+                          <p className="text-sm text-gray-600 bg-blue-100 p-3 rounded-md">
                             {operation.preOpInstructions}
                           </p>
                         </div>
@@ -116,7 +116,7 @@ const OperationsPage = () => {
                       <div className="flex flex-col gap-2 min-w-[140px]">
                         <Button 
                           onClick={() => handleDownloadDetails(operation.id)}
-                          className="bg-coral text-white hover:bg-coral-600 w-full"
+                          className="bg-blue-400 text-white hover:bg-blue-600 w-full"
                         >
                           <FileDown className="h-4 w-4 mr-2" />
                           Download Info
@@ -153,7 +153,7 @@ const OperationsPage = () => {
               {pastOperations.map((operation) => (
                 <div 
                   key={operation.id}
-                  className="p-4 border border-gray-100 rounded-md bg-gray-50"
+                  className="p-4 border border-gray-100 rounded-md bg-cyan-300"
                 >
                   <div className="flex justify-between items-start">
                     <div>

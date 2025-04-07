@@ -46,7 +46,7 @@ const ContactPage = () => {
                 
                 <CardContent className="space-y-4">
                   <ContactItem 
-                    icon={<Phone className="h-5 w-5 text-coral" />} 
+                    icon={<Phone className="h-5 w-5 text-blue" />} 
                     title="Phone" 
                     details={[
                       "Main Line: +1 (234) 567-8901",
@@ -55,7 +55,7 @@ const ContactPage = () => {
                   />
                   
                   <ContactItem 
-                    icon={<Mail className="h-5 w-5 text-coral" />} 
+                    icon={<Mail className="h-5 w-5 text-blue" />} 
                     title="Email" 
                     details={[
                       "General Inquiries: info@sacredheart.example",
@@ -64,7 +64,7 @@ const ContactPage = () => {
                   />
                   
                   <ContactItem 
-                    icon={<MapPin className="h-5 w-5 text-coral" />} 
+                    icon={<MapPin className="h-5 w-5 text-blue" />} 
                     title="Address" 
                     details={[
                       "123 Healing Way",
@@ -73,7 +73,7 @@ const ContactPage = () => {
                   />
                   
                   <ContactItem 
-                    icon={<Clock className="h-5 w-5 text-coral" />} 
+                    icon={<Clock className="h-5 w-5 text-blue" />} 
                     title="Hours" 
                     details={[
                       "Hospital: 24/7",
@@ -92,7 +92,7 @@ const ContactPage = () => {
                 
                 <CardContent className="space-y-4">
                   <ContactItem 
-                    icon={<FileText className="h-5 w-5 text-coral" />} 
+                    icon={<FileText className="h-5 w-5 text-blue" />} 
                     title="Primary Doctor" 
                     details={[
                       "Dr. Mark Twain",
@@ -103,7 +103,7 @@ const ContactPage = () => {
                   />
                   
                   <ContactItem 
-                    icon={<FileText className="h-5 w-5 text-coral" />} 
+                    icon={<FileText className="h-5 w-5 text-blue" />} 
                     title="Nurse Coordinator" 
                     details={[
                       "Sarah Johnson, RN",
@@ -112,7 +112,7 @@ const ContactPage = () => {
                     ]} 
                   />
                   
-                  <Button className="w-full bg-coral text-white hover:bg-coral-600 mt-4"
+                  <Button className="w-full bg-blue-400 text-white hover:bg-blue-600 mt-4"
                     onClick={() => {
                       toast({
                         title: "Call initiated",
@@ -132,9 +132,9 @@ const ContactPage = () => {
                 </CardHeader>
                 
                 <CardContent>
-                  <div className="aspect-video bg-coral-50 rounded-md flex items-center justify-center">
+                  <div className="aspect-video bg-cyan-200 rounded-md flex items-center justify-center">
                     <div className="text-center p-6">
-                      <MapPin className="h-8 w-8 text-coral mb-4 mx-auto" />
+                      <MapPin className="h-8 w-8 text-blue mb-4 mx-auto" />
                       <p className="text-gray-600">Interactive hospital map would be displayed here</p>
                       <Button className="mt-4" variant="outline"
                         onClick={() => {
@@ -196,14 +196,14 @@ const ContactPage = () => {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-coral text-white hover:bg-coral-600"
+                    className="w-full bg-blue-400 text-white hover:bg-blue-600"
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />
                     Send Message
                   </Button>
                 </form>
                 
-                <div className="mt-6 p-4 bg-coral-50 rounded-md">
+                <div className="mt-6 p-4 bg-cyan-200 rounded-md">
                   <h3 className="font-medium mb-2">Response Times</h3>
                   <ul className="text-sm space-y-1">
                     <li>• General inquiries: 1-2 business days</li>

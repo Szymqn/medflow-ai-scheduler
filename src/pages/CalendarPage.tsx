@@ -123,7 +123,7 @@ const CalendarPage = () => {
                   key={i}
                   className={`
                     text-center p-2 rounded-md min-h-14 cursor-pointer
-                    ${day.date ? 'bg-coral-50 hover:bg-coral-100' : 'bg-gray-50'}
+                    ${day.date ? 'bg-blue-100 hover:bg-blue-200' : 'bg-gray-50'}
                     ${day.date === selectedDate ? 'ring-2 ring-coral' : ''}
                   `}
                   onClick={() => handleDateClick(day.date)}
@@ -132,7 +132,7 @@ const CalendarPage = () => {
                     <>
                       <div className="font-medium">{day.day}</div>
                       {day.hasAppointment && (
-                        <div className="mt-1 text-sm text-coral-700">
+                        <div className="mt-1 text-sm text-coral-900">
                           {appointments[day.date].map((apt) => (
                             <div key={apt.id} className="text-xs">
                               {appointmentIcons[apt.type as keyof typeof appointmentIcons] || '📅'}

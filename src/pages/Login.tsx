@@ -82,14 +82,14 @@ const Login = () => {
             <div className="flex justify-center gap-4 mb-6">
               <Button
                 type="button"
-                className={`rounded-full ${role === 'patient' ? 'bg-coral hover:bg-coral-600' : 'bg-medgray-300 text-gray-700 hover:bg-medgray-400'}`}
+                className={`rounded-full ${role === 'patient' ? 'bg-[#4fb3d2] hover:bg-[#4fb3d2]' : 'bg-medgray-300 text-gray-700 hover:bg-medgray-400'}`}
                 onClick={() => handleRoleSelect('patient')}
               >
                 Patient
               </Button>
               <Button
                 type="button"
-                className={`rounded-full ${role === 'medical' ? 'bg-coral hover:bg-coral-600' : 'bg-medgray-300 text-gray-700 hover:bg-medgray-400'}`}
+                className={`rounded-full ${role === 'medical' ? 'bg-[#4fb3d2] hover:bg-[#4fb3d2]' : 'bg-medgray-300 text-gray-700 hover:bg-medgray-400'}`}
                 onClick={() => handleRoleSelect('medical')}
               >
                 Medical
@@ -104,8 +104,8 @@ const Login = () => {
                   type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  className="w-full"
-                />
+                  className="w-full border-gray-300 focus:!border-[#4fb3d2] focus:!ring focus:!ring-[#4fb3d2]/50"
+                  />
               </div>
               
               <div className="space-y-2">
@@ -115,13 +115,13 @@ const Login = () => {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full"
+                  className="w-full border-gray-300 focus:!border-[#4fb3d2] focus:!ring focus:!ring-[#4fb3d2]/50"
                 />
               </div>
               
               <Button 
                 type="submit" 
-                className="w-full bg-coral hover:bg-coral-600"
+                className="w-full bg-[#4fb3d2] hover:bg-[#4fb3d2]/90"
               >
                 Log In
               </Button>

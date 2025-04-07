@@ -29,8 +29,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 210 100% 80%; /* Changed to blue */
+    --input: 210 100% 80%; /* Changed to blue */
     --ring: 14 100% 68%;
 
     --radius: 0.5rem;
@@ -51,7 +51,7 @@
   }
   
   .btn-primary {
-    @apply bg-coral text-white px-4 py-2 rounded-md hover:bg-coral-600 transition-colors;
+    @apply bg-blue-400 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors;
   }
   
   .btn-secondary {
@@ -63,11 +63,11 @@
   }
   
   .status-ok {
-    @apply bg-status-ok/20 text-status-ok;
+    @apply bg-green-300 text-status-ok;
   }
   
   .status-pending {
-    @apply bg-status-pending/20 text-status-pending;
+    @apply bg-yellow-100 text-status-pending;
   }
   
   .status-tbd {

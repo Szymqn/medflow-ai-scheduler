@@ -21,7 +21,7 @@ const ProfilePage = () => {
     emergencyContact: "Jane Doe (+12345678901)",
     allergies: "Penicillin",
     medications: "Lisinopril, Metformin",
-    photo: "public/lovable-uploads/doctor.webp",
+    photo: "public/lovable-uploads/patient.jpg",
   };
 
   const handleSaveProfile = () => {
@@ -44,7 +44,7 @@ const ProfilePage = () => {
             <CardTitle>My Profile</CardTitle>
             <Button 
               onClick={() => isEditing ? handleSaveProfile() : setIsEditing(true)}
-              className="bg-coral text-white hover:bg-coral-600"
+              className="bg-blue-400 text-white hover:bg-blue-600"
             >
               {isEditing ? (
                 <>
@@ -209,7 +209,7 @@ interface MedicalHistoryItemProps {
 
 const MedicalHistoryItem = ({ date, description, doctor }: MedicalHistoryItemProps) => {
   return (
-    <div className="flex items-center p-3 rounded-md bg-coral-50">
+    <div className="flex items-center p-3 rounded-md bg-cyan-300">
       <div className="flex-1">
         <p className="font-medium">{description}</p>
         <div className="text-sm text-gray-500 mt-1">

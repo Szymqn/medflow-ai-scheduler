@@ -11,7 +11,7 @@ const Footer = ({
   supportPhone = "+123 456 7890" 
 }: FooterProps) => {
   return (
-    <footer className="w-full bg-medgray-300 px-4 py-3 mt-auto">
+    <footer className="w-full bg-indigo-100 px-4 py-3 mt-auto">
       <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-between text-sm text-gray-600">
         <div>
           Contact Support: <a href={`mailto:${supportEmail}`} className="hover:underline">{supportEmail}</a>
