@@ -72,7 +72,7 @@ const MedicalDashboard = () => {
               {upcomingOperations.map((operation) => (
                 <div
                   key={operation.id}
-                  className="p-4 rounded-md bg-cyan-200"
+                  className="p-4 rounded-md bg-coral-50"
                 >
                   <h3 className="font-medium">{operation.patientName}</h3>
                   
@@ -113,7 +113,7 @@ const MedicalDashboard = () => {
               {upcomingOperations.map((operation) => (
                 <div
                   key={operation.id}
-                  className="p-4 rounded-md bg-cyan-200 flex justify-between items-center"
+                  className="p-4 rounded-md bg-medgray-100 flex justify-between items-center"
                 >
                   <div>
                     <h3 className="font-medium">{operation.patientName}</h3>
@@ -123,7 +123,7 @@ const MedicalDashboard = () => {
                   </div>
                   
                   <Button
-                    className="bg-blue-400 text-white hover:bg-blue-600"
+                    className="bg-coral text-white hover:bg-coral-600"
                     onClick={() => handleCall(operation.patientName)}
                   >
                     <Phone className="h-4 w-4 mr-2" />
@@ -145,7 +145,7 @@ const MedicalDashboard = () => {
               {upcomingTests.map((test) => (
                 <div
                   key={test.id}
-                  className="p-4 rounded-md bg-cyan-200"
+                  className="p-4 rounded-md bg-coral-50"
                 >
                   <div className="flex justify-between items-start">
                     <div>
@@ -164,7 +164,7 @@ const MedicalDashboard = () => {
                   <div className="mt-3 flex justify-end">
                     <Button
                       size="sm"
-                      className="bg-blue-400 text-white hover:bg-blue-600 mr-2"
+                      className="bg-coral text-white hover:bg-coral-600 mr-2"
                       onClick={() => handleCall(test.patientName)}
                     >
                       <Phone className="h-4 w-4 mr-2" />

@@ -13,7 +13,7 @@ const patientData = {
   age: 45,
   bloodType: "O+",
   contact: "+12345678",
-  photo: "public/lovable-uploads/patient.jpg",
+  photo: "public/lovable-uploads/3fa00ed7-6ad0-4cf2-92aa-61185518350c.png"
 };
 
 const upcomingOperations = [
@@ -69,7 +69,7 @@ const PatientDashboard = () => {
       userRole="patient"
     >
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="md:col-span-1 bg-cyan-400">
+        <Card className="md:col-span-1">
           <CardContent className="p-6">
             <div className="flex flex-col items-center">
               <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
@@ -102,7 +102,7 @@ const PatientDashboard = () => {
           </CardContent>
         </Card>
         
-        <Card className="md:col-span-2 bg-cyan-400">
+        <Card className="md:col-span-2">
           <CardHeader>
             <CardTitle>Upcoming Operations</CardTitle>
           </CardHeader>
@@ -112,11 +112,11 @@ const PatientDashboard = () => {
               {upcomingOperations.map((operation) => (
                 <div
                   key={operation.id}
-                  className="p-4 rounded-xl bg-cyan-100"
+                  className="p-4 rounded-md bg-coral-50"
                 >
                   <div className="flex justify-between items-center">
                     <h3 className="font-medium">{operation.name}</h3>
-                    <div className="px-3 py-1 rounded-full bg-green-500 text-sm">
+                    <div className="px-3 py-1 rounded-full bg-medgray-100 text-sm">
                       {operation.status === 'ok' ? 'Patient Ready' : 'Tests TBD'}
                     </div>
                   </div>
@@ -131,7 +131,7 @@ const PatientDashboard = () => {
           </CardContent>
         </Card>
         
-        <Card className="md:col-span-full bg-cyan-400" >
+        <Card className="md:col-span-full">
           <CardHeader className="flex flex-row items-center justify-between">
             <CardTitle className="flex items-center gap-2">
               <Calendar className="h-5 w-5" />
@@ -161,7 +161,7 @@ const PatientDashboard = () => {
                   key={day}
                   className={`text-center p-2 rounded-md ${
                     day === 10 || day === 25
-                      ? 'bg-blue-100 text-blue-800'
+                      ? 'bg-coral-100 text-coral-700'
                       : 'bg-coral-50'
                   }`}
                 >
@@ -174,7 +174,7 @@ const PatientDashboard = () => {
           </CardContent>
         </Card>
         
-        <Card className="md:col-span-full bg-cyan-400">
+        <Card className="md:col-span-full">
           <CardHeader>
             <CardTitle>My Tests</CardTitle>
           </CardHeader>
@@ -201,7 +201,7 @@ const PatientDashboard = () => {
                     variant="outline"
                     className={`${
                       test.status === 'ok'
-                        ? 'bg-green-500 text-white hover:bg-coral-600'
+                        ? 'bg-coral text-white hover:bg-coral-600'
                         : 'bg-medgray-200 text-gray-500 cursor-not-allowed'
                     }`}
                     disabled={test.status !== 'ok'}
