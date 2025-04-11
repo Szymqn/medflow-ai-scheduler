@@ -21,7 +21,7 @@ const ProfilePage = () => {
     emergencyContact: "Jane Doe (+12345678901)",
     allergies: "Penicillin",
     medications: "Lisinopril, Metformin",
-    photo: "/lovable-uploads/3fa00ed7-6ad0-4cf2-92aa-61185518350c.png"
+    photo: "/lovable-uploads/patient.jpg",
   };
 
   const handleSaveProfile = () => {
