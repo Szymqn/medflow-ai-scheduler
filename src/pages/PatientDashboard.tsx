@@ -64,7 +64,7 @@ const PatientDashboard = () => {
 
   return (
     <MainLayout
-      hospitalName="Sacred Heart Hospital"
+      hospitalName="MedFlow"
       userName="John Smith"
       userRole="patient"
     >
@@ -112,7 +112,7 @@ const PatientDashboard = () => {
               {upcomingOperations.map((operation) => (
                 <div
                   key={operation.id}
-                  className="p-4 rounded-md bg-coral-50"
+                  className="p-4 rounded-md bg-blue-50"
                 >
                   <div className="flex justify-between items-center">
                     <h3 className="font-medium">{operation.name}</h3>
@@ -161,8 +161,8 @@ const PatientDashboard = () => {
                   key={day}
                   className={`text-center p-2 rounded-md ${
                     day === 10 || day === 25
-                      ? 'bg-coral-100 text-coral-700'
-                      : 'bg-coral-50'
+                      ? 'bg-blue-100 text-blue-700'
+                      : 'bg-blue-50'
                   }`}
                 >
                   {day}
@@ -184,7 +184,7 @@ const PatientDashboard = () => {
               {testResults.map((test) => (
                 <div
                   key={test.id}
-                  className="p-4 rounded-md bg-coral-50 flex justify-between items-center"
+                  className="p-4 rounded-md bg-blue-50 flex justify-between items-center"
                 >
                   <div>
                     <h3 className="font-medium">{test.name}</h3>
@@ -201,7 +201,7 @@ const PatientDashboard = () => {
                     variant="outline"
                     className={`${
                       test.status === 'ok'
-                        ? 'bg-coral text-white hover:bg-coral-600'
+                        ? 'bg-blue text-white hover:bg-blue-600'
                         : 'bg-medgray-200 text-gray-500 cursor-not-allowed'
                     }`}
                     disabled={test.status !== 'ok'}

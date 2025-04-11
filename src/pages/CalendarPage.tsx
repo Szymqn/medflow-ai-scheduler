@@ -83,7 +83,7 @@ const CalendarPage = () => {
 
   return (
     <MainLayout
-      hospitalName="Sacred Heart Hospital"
+      hospitalName="MedFlow"
       userName="John Smith"
       userRole="patient"
     >
@@ -123,8 +123,8 @@ const CalendarPage = () => {
                   key={i}
                   className={`
                     text-center p-2 rounded-md min-h-14 cursor-pointer
-                    ${day.date ? 'bg-coral-50 hover:bg-coral-100' : 'bg-gray-50'}
-                    ${day.date === selectedDate ? 'ring-2 ring-coral' : ''}
+                    ${day.date ? 'bg-blue-50 hover:bg-blue-100' : 'bg-gray-50'}
+                    ${day.date === selectedDate ? 'ring-2 ring-blue' : ''}
                   `}
                   onClick={() => handleDateClick(day.date)}
                 >
@@ -132,7 +132,7 @@ const CalendarPage = () => {
                     <>
                       <div className="font-medium">{day.day}</div>
                       {day.hasAppointment && (
-                        <div className="mt-1 text-sm text-coral-700">
+                        <div className="mt-1 text-sm text-blue-700">
                           {appointments[day.date].map((apt) => (
                             <div key={apt.id} className="text-xs">
                               {appointmentIcons[apt.type as keyof typeof appointmentIcons] || '📅'}
@@ -155,7 +155,7 @@ const CalendarPage = () => {
                 {selectedDateAppointments.length > 0 ? (
                   <div className="space-y-4">
                     {selectedDateAppointments.map((appointment) => (
-                      <div key={appointment.id} className="p-4 bg-coral-50 rounded-md">
+                      <div key={appointment.id} className="p-4 bg-blue-50 rounded-md">
                         <div className="flex justify-between items-start">
                           <div>
                             <h4 className="font-medium">{appointment.type}</h4>

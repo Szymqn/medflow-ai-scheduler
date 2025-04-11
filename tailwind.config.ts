@@ -7,7 +7,8 @@ export default {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		// "./src/**/*.{ts,tsx}",
+		'./src/**/*.{html,js,jsx,ts,tsx,css}',
 	],
 	prefix: "",
 	theme: {
@@ -53,18 +54,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				coral: {
-					DEFAULT: '#FF7F5C',
+				blue: {
+					DEFAULT: '#2B88BD',
 					50: '#FFF6F4',
-					100: '#FFE8E2',
-					200: '#FFD1C4',
-					300: '#FFB9A6',
-					400: '#FFA189',
-					500: '#FF7F5C',
-					600: '#FF5A29',
-					700: '#F53A00',
-					800: '#C22E00',
-					900: '#8F2200',
+					600: '#377BAE',
 				},
 				medgray: {
 					DEFAULT: '#E6E6E6',

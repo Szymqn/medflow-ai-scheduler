@@ -12,7 +12,7 @@ interface NavbarProps {
   userRole?: 'patient' | 'medical';
 }
 
-const Navbar = ({ hospitalName = "Sacred Heart Hospital", userName, userRole }: NavbarProps) => {
+const Navbar = ({ hospitalName = "MedFlow", userName, userRole }: NavbarProps) => {
   const { toast } = useToast();
   const navigate = useNavigate();
   
@@ -41,38 +41,46 @@ const Navbar = ({ hospitalName = "Sacred Heart Hospital", userName, userRole }: 
         {userRole && (
           <>
             <Link to="/profile">
-              <Button variant="ghost" className="rounded-full bg-coral-100 text-coral hover:bg-coral-200 hover:text-coral-700">
+              <Button variant="ghost" className="rounded-full bg-[#06629b] text-white hover:bg-[#0773b6] hover:text-white">
                 My Profile
+              </Button>
+            </Link>
+
+            <Link to="/medical-dashboard">
+              <Button variant="ghost" className="rounded-full bg-[#06629b] text-white hover:bg-[#0773b6] hover:text-white">
+                Dashboard
               </Button>
             </Link>
             
             <Link to="/operations">
-              <Button variant="ghost" className="rounded-full bg-coral-100 text-coral hover:bg-coral-200 hover:text-coral-700">
-                {userRole === 'patient' ? 'My Operations' : 'Operations'}
+              <Button variant="ghost" className="rounded-full bg-[#06629b] text-white hover:bg-[#0773b6] hover:text-white">
+                {/* {userRole === 'patient' ? 'My Operations' : 'Operations'} */}
+                Operations
               </Button>
             </Link>
             
             <Link to="/calendar">
-              <Button variant="ghost" className="rounded-full bg-coral-100 text-coral hover:bg-coral-200 hover:text-coral-700">
+              <Button variant="ghost" className="rounded-full bg-[#06629b] text-white hover:bg-[#0773b6] hover:text-white">
                 Calendar
               </Button>
             </Link>
             
             <Link to="/tests">
-              <Button variant="ghost" className="rounded-full bg-coral-100 text-coral hover:bg-coral-200 hover:text-coral-700">
-                {userRole === 'patient' ? 'My Tests' : 'Tests'}
+              <Button variant="ghost" className="rounded-full bg-[#06629b] text-white hover:bg-[#0773b6] hover:text-white">
+                {/* {userRole === 'patient' ? 'My Tests' : 'Tests'} */}
+                Tests
               </Button>
             </Link>
             
             <Link to="/contact">
-              <Button variant="ghost" className="rounded-full bg-coral-100 text-coral hover:bg-coral-200 hover:text-coral-700">
+              <Button variant="ghost" className="rounded-full bg-[#06629b] text-white hover:bg-[#0773b6] hover:text-white">
                 Contact
               </Button>
             </Link>
             
             <Button 
               variant="ghost" 
-              className="rounded-full bg-coral-100 text-coral hover:bg-coral-200 hover:text-coral-700"
+              className="rounded-full bg-[#06629b] text-white hover:bg-[#0773b6] hover:text-white"
               onClick={handleLogout}
             >
               Log out

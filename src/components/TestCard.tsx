@@ -70,7 +70,7 @@ const TestCard = ({
         
         {showScheduleButton && status === 'consult' && (
           <Button 
-            className="bg-coral text-white hover:bg-coral-600 ml-4"
+            className="bg-blue text-white hover:bg-blue-600 ml-4"
             onClick={onSchedule}
           >
             Schedule Consultation

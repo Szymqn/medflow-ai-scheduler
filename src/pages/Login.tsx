@@ -75,21 +75,21 @@ const Login = () => {
         <Card>
           <CardHeader className="text-center">
             <CardTitle>Login</CardTitle>
-            <p className="text-sm text-gray-500">Please select your role to continue</p>
+            <p className="text-lg text-gray-800">Please select your role to continue</p>
           </CardHeader>
           
           <CardContent>
             <div className="flex justify-center gap-4 mb-6">
               <Button
                 type="button"
-                className={`rounded-full ${role === 'patient' ? 'bg-coral hover:bg-coral-600' : 'bg-medgray-300 text-gray-700 hover:bg-medgray-400'}`}
+                className={`rounded-full ${role === 'patient' ? 'bg-blue hover:bg-blue-600' : 'bg-medgray-300 text-gray-700 hover:bg-medgray-400'}`}
                 onClick={() => handleRoleSelect('patient')}
               >
                 Patient
               </Button>
               <Button
                 type="button"
-                className={`rounded-full ${role === 'medical' ? 'bg-coral hover:bg-coral-600' : 'bg-medgray-300 text-gray-700 hover:bg-medgray-400'}`}
+                className={`rounded-full ${role === 'medical' ? 'bg-blue hover:bg-blue-600' : 'bg-medgray-300 text-gray-700 hover:bg-medgray-400'}`}
                 onClick={() => handleRoleSelect('medical')}
               >
                 Medical
@@ -121,7 +121,7 @@ const Login = () => {
               
               <Button 
                 type="submit" 
-                className="w-full bg-coral hover:bg-coral-600"
+                className="w-full bg-blue hover:bg-blue-600"
               >
                 Log In
               </Button>

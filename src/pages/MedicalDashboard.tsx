@@ -57,7 +57,7 @@ const MedicalDashboard = () => {
 
   return (
     <MainLayout
-      hospitalName="Sacred Heart Hospital"
+      hospitalName="MedFlow"
       userName="Dr. John Smith"
       userRole="medical"
     >
@@ -72,7 +72,7 @@ const MedicalDashboard = () => {
               {upcomingOperations.map((operation) => (
                 <div
                   key={operation.id}
-                  className="p-4 rounded-md bg-coral-50"
+                  className="p-4 rounded-md bg-blue-50"
                 >
                   <h3 className="font-medium">{operation.patientName}</h3>
                   
@@ -123,7 +123,7 @@ const MedicalDashboard = () => {
                   </div>
                   
                   <Button
-                    className="bg-coral text-white hover:bg-coral-600"
+                    className="bg-blue text-white hover:bg-blue-600"
                     onClick={() => handleCall(operation.patientName)}
                   >
                     <Phone className="h-4 w-4 mr-2" />
@@ -145,7 +145,7 @@ const MedicalDashboard = () => {
               {upcomingTests.map((test) => (
                 <div
                   key={test.id}
-                  className="p-4 rounded-md bg-coral-50"
+                  className="p-4 rounded-md bg-blue-50"
                 >
                   <div className="flex justify-between items-start">
                     <div>
@@ -164,7 +164,7 @@ const MedicalDashboard = () => {
                   <div className="mt-3 flex justify-end">
                     <Button
                       size="sm"
-                      className="bg-coral text-white hover:bg-coral-600 mr-2"
+                      className="bg-blue text-white hover:bg-blue-600 mr-2"
                       onClick={() => handleCall(test.patientName)}
                     >
                       <Phone className="h-4 w-4 mr-2" />

@@ -61,7 +61,7 @@ const OperationsPage = () => {
 
   return (
     <MainLayout
-      hospitalName="Sacred Heart Hospital"
+      hospitalName="MedFlow"
       userName="John Smith"
       userRole="patient"
     >
@@ -74,13 +74,13 @@ const OperationsPage = () => {
           <CardContent>
             <div className="space-y-6">
               {operations.map((operation) => (
-                <Card key={operation.id} className="border border-coral-100">
-                  <CardContent className="p-6">
+                <Card key={operation.id} className="border border-blue-100">
+                  <CardContent className="p-6 bg-medgray-100">
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                       <div className="flex-1">
                         <div className="flex justify-between items-start">
                           <h3 className="text-xl font-medium">{operation.name}</h3>
-                          <div className="px-3 py-1 rounded-full bg-medgray-100 text-sm">
+                          <div className="px-3 py-1 rounded-full bg-medgray-200 text-sm">
                             {operation.status === 'ok' ? 'Patient Ready' : 'Tests TBD'}
                           </div>
                         </div>
@@ -107,7 +107,7 @@ const OperationsPage = () => {
                         
                         <div className="mt-4">
                           <h4 className="text-sm font-medium mb-2">Pre-Operation Instructions:</h4>
-                          <p className="text-sm text-gray-600 bg-coral-50 p-3 rounded-md">
+                          <p className="text-sm text-gray-600 bg-medgray-300 p-3 rounded-md">
                             {operation.preOpInstructions}
                           </p>
                         </div>
@@ -116,7 +116,7 @@ const OperationsPage = () => {
                       <div className="flex flex-col gap-2 min-w-[140px]">
                         <Button 
                           onClick={() => handleDownloadDetails(operation.id)}
-                          className="bg-coral text-white hover:bg-coral-600 w-full"
+                          className="bg-blue text-white hover:bg-blue-600 w-full"
                         >
                           <FileDown className="h-4 w-4 mr-2" />
                           Download Info

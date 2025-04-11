@@ -34,7 +34,7 @@ const ProfilePage = () => {
 
   return (
     <MainLayout
-      hospitalName="Sacred Heart Hospital"
+      hospitalName="MedFlow"
       userName="John Smith"
       userRole="patient"
     >
@@ -44,7 +44,7 @@ const ProfilePage = () => {
             <CardTitle>My Profile</CardTitle>
             <Button 
               onClick={() => isEditing ? handleSaveProfile() : setIsEditing(true)}
-              className="bg-coral text-white hover:bg-coral-600"
+              className="bg-blue text-white hover:bg-blue-600"
             >
               {isEditing ? (
                 <>
@@ -209,7 +209,7 @@ interface MedicalHistoryItemProps {
 
 const MedicalHistoryItem = ({ date, description, doctor }: MedicalHistoryItemProps) => {
   return (
-    <div className="flex items-center p-3 rounded-md bg-coral-50">
+    <div className="flex items-center p-3 rounded-md bg-blue-50">
       <div className="flex-1">
         <p className="font-medium">{description}</p>
         <div className="text-sm text-gray-500 mt-1">

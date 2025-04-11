@@ -9,8 +9,7 @@ interface LogoProps {
 const Logo = ({ title = "Hospital Scheduler" }: LogoProps) => {
   return (
     <div className="flex items-center gap-2">
-      <Building2 className="h-6 w-6 text-gray-900" />
-      <span className="font-semibold text-lg text-gray-900">{title}</span>
+      <img src="public/lovable-uploads/logo.svg" alt="Logo" className="h-10 w-11" /> <span className="font-semibold text-lg text-[#032b58]">{title}</span>
     </div>
   );
 };

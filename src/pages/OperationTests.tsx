@@ -90,7 +90,7 @@ const OperationTests = () => {
 
   return (
     <MainLayout
-      hospitalName="Sacred Heart Hospital"
+      hospitalName="MedFlow"
       userName="John Smith"
       userRole="medical"
     >
