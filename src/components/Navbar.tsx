@@ -26,11 +26,11 @@ const Navbar = ({ hospitalName = "Sacred Heart Hospital", userName, userRole }: 
   };
 
   return (
-    <nav className="w-full bg-[#cdf2fc] px-4 py-3 flex items-center justify-between">
+    <nav className="w-full bg-medgray-300 px-4 py-3 flex items-center justify-between">
       <div className="flex items-center gap-4">
         <Logo title={hospitalName} />
         {userName && (
-          <span className="text-sm text-gray-700">
+          <span className="text-sm text-gray-600">
             {userRole === 'patient' ? 'Patient: ' : 'Login: '}
             {userName}
           </span>
@@ -41,53 +41,38 @@ const Navbar = ({ hospitalName = "Sacred Heart Hospital", userName, userRole }: 
         {userRole && (
           <>
             <Link to="/profile">
-              <Button variant="ghost" className="rounded-full bg-blue-800 text-white hover:bg-violet-700 hover:text-white">
+              <Button variant="ghost" className="rounded-full bg-coral-100 text-coral hover:bg-coral-200 hover:text-coral-700">
                 My Profile
               </Button>
             </Link>
-
-            {userRole === 'medical' && (
-              <Link to="/medical-dashboard">
-                <Button variant="ghost" className="rounded-full bg-blue-800 text-white hover:bg-violet-700 hover:text-white">
-                  Medical Dashboard
-                </Button>
-              </Link>
-            )} 
-            {userRole === 'patient' && (
-              <Link to="/patient-dashboard">
-                <Button variant="ghost" className="rounded-full bg-blue-800 text-white hover:bg-violet-700 hover:text-white">
-                  Patient Dashboard
-                </Button>
-              </Link>
-            )}  
             
             <Link to="/operations">
-              <Button variant="ghost" className="rounded-full bg-blue-800 text-white hover:bg-violet-700 hover:text-white">
+              <Button variant="ghost" className="rounded-full bg-coral-100 text-coral hover:bg-coral-200 hover:text-coral-700">
                 {userRole === 'patient' ? 'My Operations' : 'Operations'}
               </Button>
             </Link>
             
             <Link to="/calendar">
-              <Button variant="ghost" className="rounded-full bg-blue-800 text-white hover:bg-violet-700 hover:text-white">
+              <Button variant="ghost" className="rounded-full bg-coral-100 text-coral hover:bg-coral-200 hover:text-coral-700">
                 Calendar
               </Button>
             </Link>
             
             <Link to="/tests">
-              <Button variant="ghost" className="rounded-full bg-blue-800 text-white hover:bg-violet-700 hover:text-white">
+              <Button variant="ghost" className="rounded-full bg-coral-100 text-coral hover:bg-coral-200 hover:text-coral-700">
                 {userRole === 'patient' ? 'My Tests' : 'Tests'}
               </Button>
             </Link>
             
             <Link to="/contact">
-              <Button variant="ghost" className="rounded-full bg-blue-800 text-white hover:bg-violet-700 hover:text-white">
+              <Button variant="ghost" className="rounded-full bg-coral-100 text-coral hover:bg-coral-200 hover:text-coral-700">
                 Contact
               </Button>
             </Link>
             
             <Button 
               variant="ghost" 
-              className="rounded-full bg-blue-800 text-white hover:bg-violet-700 hover:text-white"
+              className="rounded-full bg-coral-100 text-coral hover:bg-coral-200 hover:text-coral-700"
               onClick={handleLogout}
             >
               Log out
